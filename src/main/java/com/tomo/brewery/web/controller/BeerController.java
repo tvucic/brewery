@@ -27,7 +27,7 @@ public class BeerController
     }
 
     @PostMapping // POST - create new beer
-    public ResponseEntity handlePost(BeerDTO beetDTO)
+    public ResponseEntity handlePost(@RequestBody BeerDTO beetDTO)
     {
         BeerDTO savedBeerDTO = beerService.saveNewBeer(beetDTO);
 
@@ -39,7 +39,7 @@ public class BeerController
     }
 
     @PutMapping({"/{beerId}"}) // Idempotent method
-    public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId, BeerDTO beetDTO)
+    public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId, @RequestBody BeerDTO beetDTO)
     {
         beerService.updateBeer(beerId, beetDTO);
 
