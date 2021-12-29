@@ -1,14 +1,14 @@
 package com.tomo.brewery.services;
 
-import com.tomo.brewery.web.model.BeetDTO;
+import com.tomo.brewery.web.model.BeerDTO;
 
 import java.util.UUID;
 
 public interface BeerService
 {
-    BeetDTO getBeerById(UUID beerId);
+    BeerDTO getBeerById(UUID beerId);
 
-    BeetDTO saveNewBeer(BeetDTO beetDTO);
+    BeerDTO saveNewBeer(BeerDTO beetDTO);
 
-    void updateBeer(UUID beerId, BeetDTO beetDTO);
+    void updateBeer(UUID beerId, BeerDTO beetDTO);
 }

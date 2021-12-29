@@ -1,6 +1,5 @@
 package com.tomo.brewery.services;
 
-import com.tomo.brewery.web.model.BeetDTO;
 import com.tomo.brewery.web.model.CustomerDTO;
 import org.springframework.stereotype.Service;
 

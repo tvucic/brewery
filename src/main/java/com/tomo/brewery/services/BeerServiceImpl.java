@@ -1,6 +1,6 @@
 package com.tomo.brewery.services;
 
-import com.tomo.brewery.web.model.BeetDTO;
+import com.tomo.brewery.web.model.BeerDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
@@ -9,22 +9,22 @@ import java.util.UUID;
 public class BeerServiceImpl implements BeerService
 {
     @Override
-    public BeetDTO getBeerById(UUID beerId)
+    public BeerDTO getBeerById(UUID beerId)
     {
-        return BeetDTO.builder().id(UUID.randomUUID())
+        return BeerDTO.builder().id(UUID.randomUUID())
                 .beerName("Galaxy Cat")
                 .beerStyle("Pale Ale")
                 .build();
     }
 
     @Override
-    public BeetDTO saveNewBeer(BeetDTO beetDTO)
+    public BeerDTO saveNewBeer(BeerDTO beetDTO)
     {
-        return BeetDTO.builder().id(UUID.randomUUID()).build();
+        return BeerDTO.builder().id(UUID.randomUUID()).build();
     }
 
     @Override
-    public void updateBeer(UUID beerId, BeetDTO beetDTO)
+    public void updateBeer(UUID beerId, BeerDTO beerDTO)
     {
         // todo impl would need real implementation
     }

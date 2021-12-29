@@ -5,14 +5,14 @@ import lombok.*;
 import java.util.UUID;
 
 @Data
-public class BeetDTO
+public class BeerDTO
 {
     private UUID id;
     private String beerStyle;
     private String beerName;
     private Long upc;
 
-    public BeetDTO(UUID id, String beerStyle, String beerName, Long upc)
+    public BeerDTO(UUID id, String beerStyle, String beerName, Long upc)
     {
         this.id = id;
         this.beerStyle = beerStyle;
@@ -20,7 +20,7 @@ public class BeetDTO
         this.upc = upc;
     }
 
-    public BeetDTO()
+    public BeerDTO()
     {
     }
 
@@ -32,7 +32,7 @@ public class BeetDTO
 
     protected boolean canEqual(final Object other)
     {
-        return other instanceof BeetDTO;
+        return other instanceof BeerDTO;
     }
 
     public static class BeetDTOBuilder
@@ -69,14 +69,14 @@ public class BeetDTO
             return this;
         }
 
-        public BeetDTO build()
+        public BeerDTO build()
         {
-            return new BeetDTO(id, beerStyle, beerName, upc);
+            return new BeerDTO(id, beerStyle, beerName, upc);
         }
 
         public String toString()
         {
-            return "BeetDTO.BeetDTOBuilder(id=" + this.id + ", beerStyle=" + this.beerStyle + ", beerName=" + this.beerName + ", upc=" + this.upc + ")";
+            return "BeerDTO.BeetDTOBuilder(id=" + this.id + ", beerStyle=" + this.beerStyle + ", beerName=" + this.beerName + ", upc=" + this.upc + ")";
         }
     }
 
