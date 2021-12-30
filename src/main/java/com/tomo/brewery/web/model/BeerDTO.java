@@ -25,9 +25,9 @@ public class BeerDTO
     }
 
 
-    public static BeetDTOBuilder builder()
+    public static BeerDTOBuilder builder()
     {
-        return new BeetDTOBuilder();
+        return new BeerDTOBuilder();
     }
 
     protected boolean canEqual(final Object other)
@@ -35,35 +35,35 @@ public class BeerDTO
         return other instanceof BeerDTO;
     }
 
-    public static class BeetDTOBuilder
+    public static class BeerDTOBuilder
     {
         private UUID id;
         private String beerStyle;
         private String beerName;
         private Long upc;
 
-        BeetDTOBuilder() {
+        BeerDTOBuilder() {
         }
 
-        public BeetDTOBuilder id(UUID id)
+        public BeerDTOBuilder id(UUID id)
         {
             this.id = id;
             return this;
         }
 
-        public BeetDTOBuilder beerStyle(String beerStyle)
+        public BeerDTOBuilder beerStyle(String beerStyle)
         {
             this.beerStyle = beerStyle;
             return this;
         }
 
-        public BeetDTOBuilder beerName(String beerName)
+        public BeerDTOBuilder beerName(String beerName)
         {
             this.beerName = beerName;
             return this;
         }
 
-        public BeetDTOBuilder upc(Long upc)
+        public BeerDTOBuilder upc(Long upc)
         {
             this.upc = upc;
             return this;
