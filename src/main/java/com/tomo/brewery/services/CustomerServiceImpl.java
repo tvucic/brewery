@@ -1,6 +1,5 @@
 package com.tomo.brewery.services;
 
-import com.tomo.brewery.web.model.BeerDTO;
 import com.tomo.brewery.web.model.CustomerDTO;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Service;
@@ -29,13 +28,15 @@ public class CustomerServiceImpl implements  CustomerService
     @Override
     public void updateCustomer(UUID customerId, CustomerDTO customerDTO)
     {
-        // todo impl would need real implementation
+        LOG.debug("Customer updating....");
+        // todo updating impl would need real implementation
     }
 
     @Override
     public void deleteById(UUID customerId)
     {
         LOG.debug("Customer deleting...");
+        // todo deleting impl would need real implementation
     }
 
 }
