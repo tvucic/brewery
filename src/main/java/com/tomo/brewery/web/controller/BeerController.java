@@ -21,13 +21,13 @@ public class BeerController
     }
 
     @GetMapping({"/{beerId}"}) // Spring will automatically match beerId parameter name, but with PathVariable it will do it explicitly.
-    public ResponseEntity<BeerDTO> getBeer(@PathVariable("beerId") UUID beerId)
+    public ResponseEntity<BeerDTO> getBeerById(@PathVariable("beerId") UUID beerId)
     {
         return new ResponseEntity<>(beerService.getBeerById(beerId), HttpStatus.OK);
     }
 
     @PostMapping // POST - create new beer
-    public ResponseEntity handlePost(@RequestBody BeerDTO beetDTO)
+    public ResponseEntity saveNewBeer(@RequestBody BeerDTO beetDTO)
     {
         BeerDTO savedBeerDTO = beerService.saveNewBeer(beetDTO);
 
@@ -39,7 +39,7 @@ public class BeerController
     }
 
     @PutMapping({"/{beerId}"}) // Idempotent method
-    public ResponseEntity handleUpdate(@PathVariable("beerId") UUID beerId, @RequestBody BeerDTO beetDTO)
+    public ResponseEntity updateBeer(@PathVariable("beerId") UUID beerId, @RequestBody BeerDTO beetDTO)
     {
         beerService.updateBeer(beerId, beetDTO);
 
