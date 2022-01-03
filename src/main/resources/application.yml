@@ -1,1 +1,8 @@
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpont:
+    health:
+      show-details: "always"
